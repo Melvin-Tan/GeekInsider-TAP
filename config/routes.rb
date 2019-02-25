@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     post '/suspend' => 'api#suspend'
     post '/retrievefornotifications' => 'api#retrievefornotifications'
   end
+
+  get '*path' => 'api#error'
+  post '*path' => 'api#error'
 end

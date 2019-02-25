@@ -74,7 +74,9 @@ class ApiController < ApplicationController
     render json: {recipients: recipients}
   end
 
-
+  def error
+    render_error 'No such API endpoint'
+  end
 
   private
     def render_error(message)
